@@ -1,0 +1,56 @@
+{
+  "church": {
+    "noise75": {
+      "dncnn-75.ckpt": "1v21WSvxbHQMjgNVt5LLEoMQsNeCNCbTO",
+      "ours_mse-75.ckpt": "17drZLQs4a9TaD02rFOftx0fmtG1xfgCD",
+      "pscgan-75.ckpt": "1zl-62IMr9VH89kuK5A0Yw_XYciXGVFUI"
+    },
+    "noise25": {
+      "pscgan-25.ckpt": "1DGXYRtKiGRdoM-pHFEgYptAQiZlJGK1D",
+      "dncnn-25.ckpt": "1vxWy82RpyFluUOTBMgfh-_iS3bv2BBqJ",
+      "ours_mse-25.ckpt": "1CyC--Qnjo-qxdyZk0JBzSbhcotrmNp6D"
+    },
+    "noise50": {
+      "pscgan-50.ckpt": "13UHcE-ZJ82sbhxYrx5nxQAEL6aanfjfF",
+      "ours_mse-50.ckpt": "1AVTn-n5KLn5jk0fjVN_UWydFs1LYyvqe",
+      "dncnn-50.ckpt": "1H1lYnKA8-8_V1vFwS2peqHOgjHs4QyXu"
+    }
+  },
+  "bedroom": {
+    "noise75": {
+      "dncnn-75.ckpt": "19G1xnmOH5MrPzGb5IViB_gFGNNup7tND",
+      "ours_mse-75.ckpt": "1QGavnTPxROrlUiJFhWcTYs5WHoiqidb2",
+      "pscgan-75.ckpt": "1S77pGxWq3VuZ5UVPdop6oqtOm0X8Sy_d"
+    },
+    "noise25": {
+      "pscgan-25.ckpt": "1nmR6e44lrNpZmoiFFJwb7eTAhfX3Hnc6",
+      "dncnn-25.ckpt": "1pkTBJ4Td7CzPMuVmaXDhJkuY9bOfTHVh",
+      "ours_mse-25.ckpt": "1ZLVvGr6UIMFyKu4bIjqEKZyWeuFw8BRC"
+    },
+    "noise50": {
+      "pscgan-50.ckpt": "1a6yLeFCb4_9w69-r2dsFhcrGAlmF89QX",
+      "ours_mse-50.ckpt": "1pe1uJEXe_-OZXV-AhVAeM9JzzIZMwBMo",
+      "dncnn-50.ckpt": "15IutyR5tFYXdlpbRj8y7BUNcBRp2r8WK"
+    }
+  },
+  "ffhq": {
+    "noise75": {
+      "dncnn-75.ckpt": "1Zm1TbelyFhYoYb3t8TmtT23MdI3br2lj",
+      "ours_mse-75.ckpt": "1htx_0RKjuOA9wrDt1M4Vej34hdvCK9gX",
+      "pscgan-75.ckpt": "1Xpf3pCt4OHbQQpACSbe8_O3wk6DzoiNG",
+      "lag-75.ckpt": "17FT8t0CkEmaSv1GOJ_nhGCXBkP9EUvbp"
+    },
+    "noise25": {
+      "lag-25.ckpt": "1WMm723Htp47t9SHfuRCWzEukzygviINd",
+      "pscgan-25.ckpt": "1ReM-LveOUg7aXvMDAvkMc7T0OKMddNLr",
+      "dncnn-25.ckpt": "1Q3qc6Q6jsdkqIReOyxWSieedK0g2QYbQ",
+      "ours_mse-25.ckpt": "1tvBEdwYHQea4eCXuvtgK5FAhCS8aW6YT"
+    },
+    "noise50": {
+      "pscgan-50.ckpt": "19M7f0GQU_xOqERMqs9qmyKzf2vm76VGc",
+      "ours_mse-50.ckpt": "14t6gZoP7kv9PHgpNLtPlhDj_H_brHUkX",
+      "lag-50.ckpt": "1O3hpb9RkyYtnyrzRfaiExZpteg0Mx_ES",
+      "dncnn-50.ckpt": "1W7RbYYa7lQCn-bV1P-El1w18X6PC_NoO"
+    }
+  }
+}

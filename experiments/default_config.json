@@ -1,0 +1,84 @@
+{
+  "training_method": "gan",
+  "callbacks": ["change_lr"],
+  "num_train_epochs": 10000000000000000,
+  "accelerator": "ddp",
+  "log_every": 500,
+  "training_checkpoint_path": null,
+  "training_method_cfg": {
+    "num_disc_steps": 1,
+    "gen_cfg": {
+      "type": "encdec",
+      "enc_cfg": {
+        "drips_channels": [64, 64, 64, 64],
+        "drips_depth": [14, 12, 10, 8],
+        "norm": "bias",
+        "drips_norm": "bias",
+        "channels": [
+          3,
+          128,
+          128,
+          256,
+          256,
+          512]
+      },
+      "dec_cfg": {
+        "drips_channels": [64, 64, 64, 64],
+        "norm": "bias",
+        "noise_type": "cat",
+        "channels": [
+          512,
+          256,
+          256,
+          128,
+          128
+        ],
+        "num_trgb_layers": 1
+      },
+      "loss_cfg": {
+        "type": "gen_expectation_loss",
+        "expansion": 8,
+        "penalty_frequency": 1,
+        "penalty_batch_size": 8,
+        "minmax_reg": 1e-3
+      }
+    },
+    "disc_cfg": {
+      "input_spatial_extent": 128,
+      "type": "y_preprocess_old",
+      "channels": [
+        64,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512
+      ],
+      "loss_cfg": {
+        "type": "disc_wgan",
+        "gp_reg": 10
+      }
+    },
+    "optim_cfg": {
+      "lr": 1e-3,
+      "beta1": 0,
+      "beta2": 0.99,
+      "weight_decay": 0,
+      "type": "adam"
+    }
+  },
+  "dataset_cfg": {
+    "type": "lightning-crop-resize",
+    "torchvision_class": "image_folder",
+    "len_multiplier": 1,
+    "noise_std_dev": 25,
+    "num_image_channels": 3,
+    "train_batch_size": 32,
+    "test_batch_size": 8,
+    "num_workers": 4,
+    "accelerator": "ddp",
+    "training_set_path": null,
+    "test_set_path": null
+  }
+}
