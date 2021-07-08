@@ -114,6 +114,7 @@ if __name__ == '__main__':
     ds_config['test_set_path'] = os.path.join(args.out_dir, 'test')
     datamodule = ds_fac[ds_config['type']](ds_config, n_gpus)
     datamodule.setup()
+    #TODO: stdout was redirected to devnull, should use stderr instead? fix stdout?
     print('computing train set statistics needed for FID')
     init_fid(os.path.join(str(ds_config['training_set_path']) + '_stats'),
              datamodule.train_dataloader(),
