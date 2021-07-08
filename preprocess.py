@@ -112,7 +112,7 @@ if __name__ == '__main__':
     ds_config['train_batch_size'] = 64
     ds_config['training_set_path'] = os.path.join(args.out_dir, 'train')
     ds_config['test_set_path'] = os.path.join(args.out_dir, 'test')
-    datamodule = ds_fac[ds_config['type']](ds_config)
+    datamodule = ds_fac[ds_config['type']](ds_config, n_gpus)
     datamodule.setup()
     print('computing train set statistics needed for FID')
     init_fid(os.path.join(str(ds_config['training_set_path']) + '_stats'),
